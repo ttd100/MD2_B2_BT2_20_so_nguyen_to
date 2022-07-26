@@ -1,19 +1,15 @@
 
-
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        int n = 20;
-        System.out.printf("%d số nguyên tố đầu tiên là: \n", n);
-        int count = 0; // đếm số số nguyên tố
-        int i = 2;   // tìm số nguyên tố bắt dầu từ số 2
-        while (count < n) {
-            if (isPrimeNumber(i)) {
-                System.out.print(i + " ");
-                count++;
+        int n = 100;
+        System.out.printf("tất cả số nguyên tố nhỏ hơn %d là: \n",n);
+        if (n >= 2){
+            System.out.print(2);
+        }
+        for (int i = 3; i <n ; i+=2) {
+            if (isPrimeNumber(i)){
+                System.out.print(" "+i);
             }
-            i++;
         }
     }
 
